@@ -25,13 +25,12 @@ namespace My2D
         private void FixedUpdate()
         {
             //플레이어 좌우 이동
-            rb2D.velocity = new Vector2(inputMove.x * walkSpeed,rb2D.velocity.y);
+            rb2D.velocity = new Vector2(inputMove.x * walkSpeed, rb2D.velocity.y);
         }
 
         public void OnMove(InputAction.CallbackContext context)
         {
             inputMove = context.ReadValue<Vector2>();
-            Debug.Log("inputMove:" + inputMove);
         }
     }
 }
